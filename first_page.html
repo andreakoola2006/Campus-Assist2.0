@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Welcome | Choose Role</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet" />
+  
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: "Segoe UI", Arial, sans-serif;
+    }
+
+    body {
+      position: relative;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.55);
+      z-index: 0;
+    }
+
+    .overlay {
+      min-height: 100vh;
+      width: 100%;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .overlay::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background:
+        linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+        url("images/bg.jpg");
+      background-size: cover;
+      background-position: center;
+      z-index: -1;
+    }
+
+    .container {
+      padding: 50px 40px;
+      background: rgba(0, 0, 0, 0.45);
+      color: #ffffff;
+      text-align: center;
+      border-radius: 12px;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      max-width: 500px;
+      width: 90%;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+      transform: translateY(0);
+      transition: all 0.3s ease;
+    }
+
+    .container:hover {
+      transform: translateY(-10px);
+    }
+
+    .brand-name {
+      font-size: 36px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: #ffffff;
+      margin-bottom: 15px;
+      font-family: 'Playfair Display', serif;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    .tagline {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      font-weight: 500;
+      font-style: italic;
+      color: #ffffff;
+      margin-bottom: 40px;
+      line-height: 1.4;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    h1 {
+      color: #ffffff;
+      margin-bottom: 40px;
+      font-size: 24px;
+      font-weight: 600;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .btn-group {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
+
+    a.btn {
+      padding: 20px 40px;
+      font-size: 18px;
+      border-radius: 12px;
+      background: #1e90ff;
+      color: white;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      font-weight: 600;
+      min-width: 180px;
+      transition: all 0.3s ease;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 8px 25px rgba(30, 144, 255, 0.4);
+    }
+
+    a.btn:hover {
+      background: #0f4c81;
+      transform: scale(1.05);
+      box-shadow: 0 12px 30px rgba(30, 144, 255, 0.6);
+    }
+    .logo {
+    width:200px;
+}
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 40px 25px;
+        margin: 20px;
+      }
+      
+      .btn-group {
+        flex-direction: column;
+        gap: 20px;
+      }
+      
+      a.btn {
+        min-width: 100%;
+        padding: 20px;
+      }
+      
+      .brand-name {
+        font-size: 28px;
+      }
+      
+      .tagline {
+        font-size: 20px;
+      }
+      
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay">
+    <div class="container" role="main">
+              <img src="logo.png"class="logo">
+      <div class="brand-name">CampusAssist</div>
+      <div class="tagline">Smart Help for Smart Campuses</div>
+      <div class="btn-group">
+        <a href="student_login.php" class="btn">Student</a>
+        <a href="staff_login.php" class="btn">Staff</a>
+        <a href="admin_login.php" class="btn">Admin</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
